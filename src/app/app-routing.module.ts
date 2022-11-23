@@ -5,7 +5,7 @@ import { DigiTableComponent } from './components/digi-table/digi-table.component
 
 const routes: Routes = [
   {path:"home",component: DigiTableComponent},
-  {path:"DigiDetail/:id",component: DigiDetailComponent},
+  {path:"DigiDetail/:name",component: DigiDetailComponent},
   {path:" ",pathMatch: "full", redirectTo:"home"},
   {path:"** ",pathMatch: "full", redirectTo:"home"},
 

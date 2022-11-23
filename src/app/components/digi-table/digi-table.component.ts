@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { DigimonService } from '../../services/digimon.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,12 +17,13 @@ export class DigiTableComponent implements OnInit {
   datasource = new MatTableDataSource<any>(this.data);
   Digimons = [];
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
- 
-
 
   constructor(
-    private digiservice: DigimonService
-  ) { }
+    private digiservice: DigimonService,
+    private router:Router
+  ) {
+   
+   }
 
   ngOnInit(): void {
     this.getDigimons();
@@ -29,12 +31,13 @@ export class DigiTableComponent implements OnInit {
   getDigimons(){ 
       let  DigimonData;
       for(let i = 0; i<=209; i++){
-        this.digiservice.getDigimons().subscribe(
+        this.digiservice.getDigimons(name).subscribe(
           res=>{
-            DigimonData = {
+              DigimonData = {
               level: res[i].level,
               image: res[i].img,
-              name:  res[i].name
+              name:  res[i].name,
+            
             };
             this.data.push(DigimonData);
             this.datasource  = new MatTableDataSource<any>(this.data);
@@ -55,6 +58,12 @@ export class DigiTableComponent implements OnInit {
     if (this.datasource.paginator) {
       this.datasource.paginator.firstPage();
     }
+  }
+
+  getRow(row){
+   this.router.navigateByUrl(`DigiDetail/${row.name}`);
+   console.log(row)
+    
   }
 
 }

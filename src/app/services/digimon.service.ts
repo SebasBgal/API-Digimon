@@ -13,7 +13,7 @@ export class DigimonService {
     private http: HttpClient
   ) { }
 
-  getDigimons(){
+  getDigimons(name){
     return this.http.get<any>("https://digimon-api.vercel.app/api/digimon")
   }
 }

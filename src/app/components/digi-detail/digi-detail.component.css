@@ -1,0 +1,18 @@
+.card{
+    width: 300px;
+    margin: auto;
+    margin-top: 20px;
+    background-image: linear-gradient(to left, rgba(227,231,72,68) , rgb(247, 249, 249));
+}
+.card_name{
+  text-align: center;
+  width: 200px;
+}
+
+.card_level{
+    text-align: center;
+    width: 300px;
+    color: red;
+    font-size: 15px;
+  }
+  
