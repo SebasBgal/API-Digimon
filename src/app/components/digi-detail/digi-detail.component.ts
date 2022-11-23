@@ -13,7 +13,7 @@ export class DigiDetailComponent implements OnInit {
   Digimon:any = "";
   DigiLevel:any = "";
   DigiImg = "";
-  namee= "";
+  nameRef= "";
 
   constructor(
     private DigimonService: DigimonService,
@@ -35,8 +35,8 @@ export class DigiDetailComponent implements OnInit {
        for (let i = 0 ; i<=209;i++){
         this.DigimonService.getDigimons(name).subscribe(
           res => {
-            this.namee = res[i].name;
-            if(name==this.namee){
+            this.nameRef = res[i].name;
+            if(name==this.nameRef){
               this.Digimon = res[i];
               this.DigiImg = res[i].img;
               this.DigiLevel = res[i].level;
