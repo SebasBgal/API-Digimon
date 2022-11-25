@@ -1,77 +1,355 @@
+@media  only screen and (min-width:0px)and (max-width: 509px ) {
+    
+    .container{
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .list{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        
+    }
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-color:rgb(252, 254, 254);
+        border-radius: 20px;
+        border:solid red;
+        height: 200px;
+        width: 200px;
 
-.container{
-    width: 100%;
-    margin-top: 20px;
-    text-align: center;
+    }
+
+    .card:hover{
+        cursor: pointer;
+    }
+    
+     h2{
+         border-radius: 20px;
+         background-color: rgb(231, 226, 146);
+         margin: 3px;
+         font-family:Arial, Helvetica, sans-serif;
+         color: rgb(9, 9, 9);
+         }
+    
+    .card__img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(234, 238, 242);
+    }
+
+    
+    ::ng-deep.mat-paginator{
+        width: 80%;
+        margin: auto;
+    
+    }
+    
+    .mat-form-field{
+        font-size: 13px;
+        width: 20%;
+        margin-bottom: 5px;
+        padding: 10px;
+        margin-left: 40%;
+    }
+    
+    ::ng-deep.mat-form-field-label{
+         color: white !important ;
+         
+    }
+    
+    ::ng-deep.mat-form-field-underline{
+        background-color: white !important  
+    }
+    
+    ::ng-deep.mat-form-field-ripple{
+        background-color: white !important  
+    }
+    
+    ::placeholder{
+        color: white !important;
+    }
+    
+    input{
+        color: white !important;
+    }
 }
 
-table{
-    min-width: 80%;
-    margin: auto;
-    text-align: center;
-    border-color: black;
+@media  only screen and (min-width:510px)and (max-width: 767px ) {
+    
+    .container{
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        display: grid;
+        grid-template-columns: auto auto;
+       
+    }
+   
+    .list{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        
+    }
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-color:rgb(252, 254, 254);
+        border-radius: 20px;
+        border:solid red;
+        height: 200px;
+        width: 200px;
+ 
+    }
+    .card:hover{
+        cursor: pointer;
+    }
+    
+     h2{
+         border-radius: 20px;
+         background-color: rgb(231, 226, 146);
+         margin: 3px;
+         font-family:Arial, Helvetica, sans-serif;
+         color: rgb(9, 9, 9);
+         }
+    
+    .card__img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(234, 238, 242);
+    }
+
+    .search{
+        width: auto;
+    }
+    
+    ::ng-deep.mat-paginator{
+        width: 80%;
+        margin: auto;
+    
+    }
+    
+    .mat-form-field{
+        font-size: 13px;
+        width: 20%;
+        margin-bottom: 5px;
+        padding: 10px;
+        margin-left: 40%;
+    }
+    
+    ::ng-deep.mat-form-field-label{
+         color: white !important ;
+         
+    }
+    
+    ::ng-deep.mat-form-field-underline{
+        background-color: white !important  
+    }
+    
+    ::ng-deep.mat-form-field-ripple{
+        background-color: white !important  
+    }
+    
+    ::placeholder{
+        color: white !important;
+    }
+    
+    input{
+        color: white !important;
+    }
+}
+
+@media  only screen and (min-width:768px)and (max-width: 1024px ) {
+    
+    .container{
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        display: grid;
+        grid-template-columns: auto auto auto;
+       
+    }
+   
+    .list{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        
+    }
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-color:rgb(252, 254, 254);
+        border-radius: 20px;
+        border:solid red;
+        height: 200px;
+        width: 200px;
+    }
+    .card:hover{
+        cursor: pointer;
+    }
+    
+     h2{
+         border-radius: 20px;
+         background-color: rgb(231, 226, 146);
+         margin: 3px;
+         font-family:Arial, Helvetica, sans-serif;
+         color: rgb(9, 9, 9);
+         }
+    
+    .card__img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(234, 238, 242);
+    }
+
+    .search{
+        width: auto;
+    }
+    
+    ::ng-deep.mat-paginator{
+        width: 80%;
+        margin: auto;
+    
+    }
+    
+    .mat-form-field{
+        font-size: 13px;
+        width: 20%;
+        margin-bottom: 5px;
+        padding: 10px;
+        margin-left: 40%;
+    }
+    
+    ::ng-deep.mat-form-field-label{
+         color: white !important ;
+         
+    }
+    
+    ::ng-deep.mat-form-field-underline{
+        background-color: white !important  
+    }
+    
+    ::ng-deep.mat-form-field-ripple{
+        background-color: white !important  
+    }
+    
+    ::placeholder{
+        color: white !important;
+    }
+    
+    input{
+        color: white !important;
+    }
+}
+
+@media  only screen and (min-width:1025px)and (max-width: 2000px ) {
+    
+    .container{
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+       
+    }
+   
+    .list{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        
+    }
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-color:rgb(252, 254, 254);
+        border-radius: 20px;
+        border:solid red;
+        height: 200px;
+        width: 200px;
+        
+      
+    }
+
+    .card:hover{
+        cursor: pointer;
+    }
+    
+     h2{
+         border-radius: 20px;
+         background-color: rgb(231, 226, 146);
+         margin: 3px;
+         font-family:Arial, Helvetica, sans-serif;
+         color: rgb(9, 9, 9);
+         }
+    
+    .card__img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(234, 238, 242);
+    }
+
+    ::ng-deep.mat-paginator{
+        width: 80%;
+        margin: auto;
+    
+    }
+    
+    .mat-form-field{
+        font-size: 13px;
+        width: 20%;
+        margin-bottom: 5px;
+        padding: 10px;
+        margin-left: 40%;
+    }
+    
+    ::ng-deep.mat-form-field-label{
+         color: white !important ;
+         
+    }
+    
+    ::ng-deep.mat-form-field-underline{
+        background-color: white !important  
+    }
+    
+    ::ng-deep.mat-form-field-ripple{
+        background-color: white !important  
+    }
+    
+    ::placeholder{
+        color: white !important;
+    }
+    
+    input{
+        color: white !important;
+    }
 }
 
 
 
-.mat-header-cell{
-    text-align: center;
-    font-size: 15px;
-    color: black;
-    font-weight: bold;
-    background-color: rgb(241, 245, 130);
-}
 
-.mat-cell:nth-child(odd){
-    background-image: linear-gradient(to right, rgba(227,231,72,68) , rgb(247, 249, 249));
-    color: rgb(11, 11, 11);
-}
 
-.secondcell:nth-child(odd){
-    background-image: linear-gradient(to left, rgba(227,231,72,68) , rgb(247, 249, 249));
-}
-
-.mat-cell:first-letter{
-    text-transform: uppercase;
-}
-
-.mat-row:hover{
-    cursor: pointer;
-}
-
-::ng-deep.mat-paginator{
-    width: 80%;
-    margin: auto;
-
-}
-
-.mat-form-field{
-    font-size: 13px;
-    width: 20%;
-    margin-bottom: 5px;
-    padding: 10px;
-}
-
-::ng-deep.mat-form-field-label{
-     color: white !important ;
-     
-}
-
-::ng-deep.mat-form-field-underline{
-    background-color: white !important  
-}
-
-::ng-deep.mat-form-field-ripple{
-    background-color: white !important  
-}
-
-::placeholder{
-    color: white !important;
-}
-
-input{
-    color: white !important;
-}
 
 
 

@@ -7,7 +7,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 })
 export class DigimonService {
   
-  baseUrl= environment.baseUrl;
 
   constructor(
     private http: HttpClient

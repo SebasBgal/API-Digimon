@@ -30,7 +30,7 @@ export class DigiTableComponent implements OnInit {
   }
   getDigimons(){ 
       let  DigimonData;
-      for(let i = 0; i<=209; i++){
+      for(let i = 0; i<=9; i++){
         this.digiservice.getDigimons(name).subscribe(
           res=>{
               DigimonData = {
@@ -60,9 +60,9 @@ export class DigiTableComponent implements OnInit {
     }
   }
 
-  getRow(row){
-   this.router.navigateByUrl(`DigiDetail/${row.name}`);
-   console.log(row)
+  getdigimondetail(digimon){
+   this.router.navigateByUrl(`DigiDetail/${digimon.name}`);
+   console.log(digimon)
     
   }
 
