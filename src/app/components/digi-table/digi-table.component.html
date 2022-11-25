@@ -1,12 +1,13 @@
 
-  <mat-form-field>
-    <mat-label>Buscador de Digimon</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Inserte el Digimon" #input autocomplete="off">
-  </mat-form-field>
+ 
+<div class="search-digimon">
+  <input type="text"  name="Search" [(ngModel)]="searchtext" placeholder="Buscar Digimon por nombre">
+</div>
 
 <div class="container " >
 
-  <div  class="list" *ngFor="let digimon of data" (click)="getdigimondetail(digimon)"  [dataSource]="datasource" >
+  <div  class="list" *ngFor="let digimon of data | paginate: {itemsPerPage:20, currentPage:page, totalitems:totalDigimon}| filter:searchtext" 
+  (click)="getdigimondetail(digimon)"  >
     <div class="card"    >
         <div >
             <h2 >{{digimon.name}} </h2>
@@ -25,4 +26,6 @@
  </div>
  
   </div>
-  <mat-paginator [length]="209" [pageSizeOptions]="[5,10,20,40, 50, 100,209]" aria-label="Select page"></mat-paginator>
+  
+
+  <pagination-controls (pageChange)="page = $event; data= []; getDigimons()"></pagination-controls>

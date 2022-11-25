@@ -72,13 +72,22 @@
     ::ng-deep.mat-form-field-ripple{
         background-color: white !important  
     }
-    
     ::placeholder{
-        color: white !important;
+        color: rgb(26, 25, 25) !important;
     }
     
     input{
-        color: white !important;
+        color: rgb(17, 16, 16) !important;
+    }
+
+    pagination-controls{
+
+        text-align: center;
+ 
+    }
+
+    .search-digimon{
+        text-align: center;
     }
 }
 
@@ -163,11 +172,21 @@
     }
     
     ::placeholder{
-        color: white !important;
+        color: rgb(26, 25, 25) !important;
     }
     
     input{
-        color: white !important;
+        color: rgb(17, 16, 16) !important;
+    }
+
+    pagination-controls{
+
+        text-align: center;
+ 
+    }
+
+    .search-digimon{
+        text-align: center;
     }
 }
 
@@ -251,11 +270,21 @@
     }
     
     ::placeholder{
-        color: white !important;
+        color: rgb(26, 25, 25) !important;
     }
     
     input{
-        color: white !important;
+        color: rgb(17, 16, 16) !important;
+    }
+
+    pagination-controls{
+
+        text-align: center;
+ 
+    }
+
+    .search-digimon{
+        text-align: center;
     }
 }
 
@@ -315,6 +344,8 @@
         margin: auto;
     
     }
+
+
     
     .mat-form-field{
         font-size: 13px;
@@ -338,12 +369,24 @@
     }
     
     ::placeholder{
-        color: white !important;
+        color: rgb(26, 25, 25) !important;
     }
     
     input{
-        color: white !important;
+        color: rgb(17, 16, 16) !important;
     }
+
+    pagination-controls{
+
+        text-align: center;
+ 
+    }
+
+    .search-digimon{
+        text-align: center;
+    }
+
+    
 }
 
 

@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
+import { Component, OnInit} from '@angular/core';
+
 import { DigimonService } from '../../services/digimon.service';
 import { Router } from '@angular/router';
 
@@ -12,11 +11,10 @@ import { Router } from '@angular/router';
 })
 export class DigiTableComponent implements OnInit {
 
-  displayedColumns: string[] = ["level","image","name"];
+ searchtext:any;
   data:any[] = [];
-  datasource = new MatTableDataSource<any>(this.data);
-  Digimons = [];
-  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  page = 1;
+  totalDigimon:number;
 
   constructor(
     private digiservice: DigimonService,
@@ -30,7 +28,7 @@ export class DigiTableComponent implements OnInit {
   }
   getDigimons(){ 
       let  DigimonData;
-      for(let i = 0; i<=9; i++){
+      for(let i = 0; i<=209; i++){
         this.digiservice.getDigimons(name).subscribe(
           res=>{
               DigimonData = {
@@ -40,8 +38,8 @@ export class DigiTableComponent implements OnInit {
             
             };
             this.data.push(DigimonData);
-            this.datasource  = new MatTableDataSource<any>(this.data);
-            this.datasource.paginator = this.paginator;
+            this.totalDigimon = this.data.length;
+          
           },
           err=>{
             console.log(err);
@@ -51,19 +49,15 @@ export class DigiTableComponent implements OnInit {
      
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.datasource.filter = filterValue.trim().toLowerCase();
-
-    if (this.datasource.paginator) {
-      this.datasource.paginator.firstPage();
-    }
-  }
+  
 
   getdigimondetail(digimon){
    this.router.navigateByUrl(`DigiDetail/${digimon.name}`);
    console.log(digimon)
     
   }
+
+
+
 
 }
