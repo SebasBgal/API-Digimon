@@ -33,7 +33,7 @@ export class DigiDetailComponent implements OnInit {
   getDigimon(name){
     console.log(name)
        for (let i = 0 ; i<=209;i++){
-        this.DigimonService.getDigimons(name).subscribe(
+        this.DigimonService.getDigimons().subscribe(
           res => {
             this.nameRef = res[i].name;
             if(name==this.nameRef){

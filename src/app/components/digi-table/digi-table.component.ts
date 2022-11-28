@@ -29,7 +29,7 @@ export class DigiTableComponent implements OnInit {
   getDigimons(){ 
       let  DigimonData;
       for(let i = 0; i<=209; i++){
-        this.digiservice.getDigimons(name).subscribe(
+        this.digiservice.getDigimons().subscribe(
           res=>{
               DigimonData = {
               level: res[i].level,
@@ -53,8 +53,6 @@ export class DigiTableComponent implements OnInit {
 
   getdigimondetail(digimon){
    this.router.navigateByUrl(`DigiDetail/${digimon.name}`);
-   console.log(digimon)
-    
   }
 
 
